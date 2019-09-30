@@ -2,6 +2,7 @@
 Pi calculation using threads
 
 For compiling, use this parameters (-lm if ld return error for pow)
+## gcc pi-series.c -lpthread -o pi-series.bin -lm
 
 # goal (PT_br)
 Escolha duas séries quaisquer para aproximar o número pi do site Pi series 1 ou Pi series 2 ou outro

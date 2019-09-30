@@ -23,8 +23,8 @@ int main() {
 	
 	int i, method_counter, number_of_methods = 2;
 	
-	clock_t start_cycle, end_cycle;
-	double cpu_time_used;
+	struct timespec start, finish;
+	double elapsed;
 	
 	long double pi = 0;
 	
@@ -33,13 +33,14 @@ int main() {
 	for (method_counter = 1; method_counter <= number_of_methods; method_counter++) {
 		for (i = 0; i < sets_of_threads; i++) {
 			
-			start_cycle = clock();
+			clock_gettime(CLOCK_MONOTONIC, &start);
 			pi = calculate_pi(number_of_threads[i], method_counter);
-			end_cycle = clock();
+			clock_gettime(CLOCK_MONOTONIC, &finish);
 			
-			cpu_time_used = (double)(end_cycle - start_cycle)/CLOCKS_PER_SEC;
+			elapsed = (finish.tv_sec - start.tv_sec);
+			elapsed += (finish.tv_nsec - start.tv_nsec) / 1000000000.0;
 			
-			printf("\nFor %d threads, method %d, elapsed time was: %fs", number_of_threads[i], method_counter, cpu_time_used);
+			printf("\nFor %d threads, method %d, elapsed time was: %fs", number_of_threads[i], method_counter, elapsed);
 			printf("\nValue of PI using method %d and %d threads: %.*Lf", method_counter, number_of_threads[i], 63, pi);
 		}
 	}

@@ -1,6 +1,8 @@
 # threads
 Pi calculation using threads
 
+For compiling, use this parameters (-lm if ld return error for pow)
+
 # goal (PT_br)
 Escolha duas séries quaisquer para aproximar o número pi do site Pi series 1 ou Pi series 2 ou outro
 site qualquer. Veja exemplos sequenciais em Pi sequencial. Implemente a versão paralela dessas
@@ -28,3 +30,7 @@ de linhas (NxTempo) apresentado os resultados ob
 dos em ambas as máquinas
 Compare o resultado das duas soluções (series) escolhidas, indicando qual série é mais
 eficiente em termos de tempo e qualidade da solução (i.e. valor mais exato de pi)
+
+# Future improvements:
+Including graphs of CPU utilization:
+https://github.com/rigel314/ttysys

@@ -32,6 +32,9 @@ dos em ambas as máquinas
 Compare o resultado das duas soluções (series) escolhidas, indicando qual série é mais
 eficiente em termos de tempo e qualidade da solução (i.e. valor mais exato de pi)
 
+# Some test results:
+![](https://github.com/geanceretta/threads/blob/master/threads-vs-time.png)
+
 # Future improvements:
 Including graphs of CPU utilization:
 https://github.com/rigel314/ttysys

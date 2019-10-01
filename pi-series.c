@@ -4,7 +4,7 @@
 #include <pthread.h>
 #include <time.h>
 
-#define number_of_iterations 9000000000 //target
+#define number_of_iterations 1000000000 //target
 //#define number_of_iterations 176 //=16*11 max of iterations where all 16 slices have a non zero value for method 1
 //#define number_of_iterations 368 //max of iterations where all 16 slices have a non zero value for method 2
 
